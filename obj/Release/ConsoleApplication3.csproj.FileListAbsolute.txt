@@ -3,3 +3,4 @@ E:\Programmes visual studio\ConsoleApplication3\ConsoleApplication3\bin\Release\
 E:\Programmes visual studio\ConsoleApplication3\ConsoleApplication3\bin\Release\ConsoleApplication3.pdb
 E:\Programmes visual studio\ConsoleApplication3\ConsoleApplication3\obj\Release\ConsoleApplication3.exe
 E:\Programmes visual studio\ConsoleApplication3\ConsoleApplication3\obj\Release\ConsoleApplication3.pdb
+E:\Programmes visual studio\ConsoleApplication3\ConsoleApplication3\obj\Release\ConsoleApplication3.csprojResolveAssemblyReference.cache

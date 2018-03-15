@@ -10,6 +10,7 @@ namespace ConsoleApplication3
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             messageDebut();
             menu();
             bool recommencer = false, toucheMenu = false, partie = true, recommencerTouche = false;
@@ -99,29 +100,36 @@ namespace ConsoleApplication3
 
         static void messageDebut()
         {
-            Console.WriteLine("/|---------------------------------------------------|\\");
-            Console.WriteLine("             Voici le jeu du PLUS OU MOINS");
-            Console.WriteLine("                 Créer par Sauvajohn");
-            Console.WriteLine("/|---------------------------------------------------|\\\n\n");
+            CentrerLeTexte("/|---------------------------------------------------|\\");
+            CentrerLeTexte("Voici le jeu du PLUS OU MOINS");
+            CentrerLeTexte(" Créer par Sauvajohn");
+            CentrerLeTexte("/|---------------------------------------------------|\\\n\n");
         }
         static void menu()
         {
-            Console.WriteLine("/****************************************************\\");
-            Console.WriteLine("Voici le menu du jeu, Veuillez choisir une difficulté :");
-            Console.WriteLine("<F1> - Facile    (1-100)");
-            Console.WriteLine("<F2> - Moyen     (1-500)");
-            Console.WriteLine("<F3> - Difficile (1-1000)");
-            Console.WriteLine("<F4> - Extrème   (1-10000)");
-            Console.WriteLine("\\****************************************************/");
+            CentrerLeTexte("/****************************************************\\");
+            CentrerLeTexte("Voici le menu du jeu, Veuillez choisir une difficulté :");
+            CentrerLeTexte("<F1> - Facile    (1-100)");
+            CentrerLeTexte("<F2> - Moyen     (1-500)");
+            CentrerLeTexte("<F3> - Difficile (1-1000)");
+            CentrerLeTexte("<F4> - Extrème   (1-10000)");
+            CentrerLeTexte("\\****************************************************/");
 
         }
         static int configurationDebut(string difficulter, int nombreMaxi)
         {
             Console.Clear();
             messageDebut();
-            Console.WriteLine("                    **"+difficulter+"**");
+            CentrerLeTexte("**"+difficulter+"**");
             int valeurATrouver = new Random().Next(0, nombreMaxi);
             return valeurATrouver;
+        }
+
+        private static void CentrerLeTexte(string texte)
+        {
+            int nbEspaces = (Console.WindowWidth - texte.Length) / 2;
+            Console.SetCursorPosition(nbEspaces, Console.CursorTop);
+            Console.WriteLine(texte);
         }
     }
 }
